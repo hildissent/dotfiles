@@ -1,0 +1,53 @@
+[user]
+    name = Hildy
+    email = travis.heldibridle@gmail.com
+
+[core]
+    editor = zed --wait
+    excludesFile = ~/.gitignore_global
+
+[init]
+    defaultBranch = main
+
+    [alias]
+        # Status & inspection
+        st = status
+        ss = status --short
+
+        # Staging & commits
+        add = add
+        aa = add --all
+        ci = commit
+        unstage = reset HEAD --
+        amend = commit --amend --no-edit
+
+        # Branching
+        br = branch
+        bra = branch --all
+        co = checkout
+        cob = checkout -b
+
+        # Viewing history
+        log = log --oneline --graph --all
+        ll = log --oneline
+        last = log -1 HEAD
+
+        # Merging & rebasing
+        merge = merge --no-ff
+        rb = rebase
+        rbi = rebase -i
+
+        # Diffing
+        diff = diff --color-words
+        dc = diff --cached
+
+        # Stashing
+        stash = stash
+        stl = stash list
+        stp = stash pop
+
+        # Cleanup
+        clean-merged = branch --merged | grep -v '^*' | xargs -n 1 git branch -d
+
+[pull]
+    ff = only
