@@ -44,3 +44,15 @@ source /usr/local/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-
 
 # Better history search with fzf
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+
+# NVM (Node Version Manager)
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
+
+# rbenv (Ruby Version Manager)
+eval "$(rbenv init - zsh)"
+
+# Auto-list directory contents after cd
+chpwd() {
+    eza --group-directories-first
+}

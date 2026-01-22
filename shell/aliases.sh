@@ -1,3 +1,4 @@
+alias ls='eza'
 alias ll='ls -lah'
 alias la='ls -la'
 alias ..='cd ..'
