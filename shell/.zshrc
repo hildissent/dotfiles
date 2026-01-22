@@ -12,7 +12,7 @@ setopt INC_APPEND_HISTORY
 # Autocomplete improvements
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'  # Case-insensitive
-zstyle ':completion:*' menu select                          # Use arrow keys to navigate
+zstyle ':completion:*' menu select                         # Use arrow keys to navigate
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"    # Colored file listings
 zstyle ':completion:*:*:git:*' script ~/.dotfiles/scripts/git-completion.sh
 
@@ -44,6 +44,10 @@ source /usr/local/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-
 
 # Better history search with fzf
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+
+# Use fd for fzf file search
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # NVM (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"
