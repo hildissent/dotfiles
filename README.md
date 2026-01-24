@@ -21,4 +21,4 @@ bash ~/.dotfiles/bootstrap.sh
 - zsh with syntax highlighting, git info prompt, fzf history search
 - Node.js for JavaScript development
 - Essential CLI tools: git, ripgrep, fzf, bat, eza, etc.
-- Zed editor, Ghostty terminal, Claude, 1Password
+- Zed editor, iTerm2, Claude, 1Password
