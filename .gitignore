@@ -20,3 +20,6 @@ ehthumbs.db
 *.swo
 *.swn
 .*.sw?
+
+# Claude Code local state
+.claude/
