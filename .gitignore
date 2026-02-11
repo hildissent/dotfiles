@@ -21,5 +21,8 @@ ehthumbs.db
 *.swn
 .*.sw?
 
+# Local secrets
+.secrets
+
 # Claude Code local state
 .claude/

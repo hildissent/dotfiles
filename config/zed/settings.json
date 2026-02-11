@@ -7,6 +7,16 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "context_servers": {
+    "obsidian-mcp-tools": {
+      "enabled": true,
+      "command": "/Users/hildy/Library/Mobile Documents/iCloud~md~obsidian/Documents/Roleplaying Games/.obsidian/plugins/mcp-tools/bin/mcp-server",
+      "args": [],
+      "env": {
+        "OBSIDIAN_API_KEY": "PLACEHOLDER"
+      }
+    }
+  },
   "icon_theme": {
     "mode": "system",
     "light": "Zed (Default)",
