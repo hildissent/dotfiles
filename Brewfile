@@ -29,7 +29,6 @@ cask "affinity"
 cask "astropad"
 cask "claude"
 cask "claude-code"
-cask "codex"
 cask "discord"
 cask "font-jetbrains-mono"
 cask "gplates"
@@ -44,7 +43,6 @@ cask "skim"
 cask "steam"
 cask "vlc"
 cask "zed"
-cask "zen"
 mas "1Password for Safari", id: 1569813296
 mas "Fresco", id: 1251572132
 mas "Goodnotes", id: 1444383602
