@@ -12,9 +12,13 @@ setopt INC_APPEND_HISTORY
 # Autocomplete improvements
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'  # Case-insensitive
+zstyle ':completion:*' list-suffixes
+zstyle ':completion:*' expand prefix suffix
 zstyle ':completion:*' menu select                         # Use arrow keys to navigate
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"    # Colored file listings
 zstyle ':completion:*:*:git:*' script ~/.dotfiles/scripts/git-completion.sh
+autoload bashcompinit && bashcompinit
+[[ -r ~/Projects/autopkg_complete/autopkg ]] && source ~/Projects/autopkg_complete/autopkg
 
 # Ignore duplicate history entries
 setopt HIST_IGNORE_ALL_DUPS
