@@ -33,15 +33,26 @@ if [ -f ~/.dotfiles/shell/aliases.sh ]; then
     source ~/.dotfiles/shell/aliases.sh
 fi
 
-# Simple prompt
+# Simple prompt — shows exit code of last command if non-zero
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-PS1='%F{blue}%n%f@%F{green}%m%f %F{yellow}%1~%f%F{red}$(parse_git_branch)%f %# '
+PS1='%(?..[%F{red}%?%f] )%F{blue}%n%f@%F{green}%m%f %F{yellow}%1~%f%F{red}$(parse_git_branch)%f %# '
 
-# Syntax highlighting
+# Up/down arrow: search history by prefix (what you've already typed)
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
+
+# Syntax highlighting (must come before autosuggestions)
 source /usr/local/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Fish-like inline autosuggestions from history
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^ ' autosuggest-accept   # Ctrl+Space to accept suggestion
 
 # fzf integration for command history
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -63,6 +74,43 @@ eval "$(rbenv init - zsh)"
 # Auto-list directory contents after cd
 chpwd() {
     eza --group-directories-first
+}
+
+# zoxide: smarter cd with frecency (use 'z' to jump, 'zi' for interactive fzf)
+eval "$(zoxide init zsh)"
+
+# --- Shell functions ---
+
+# mkcd: make a directory and cd into it
+mkcd() {
+    mkdir -p "$@" && cd "${@: -1}"
+}
+
+# extract: universal archive extractor
+extract() {
+    if [ -z "$1" ]; then
+        echo "Usage: extract <archive>"
+        return 1
+    fi
+    if [ ! -f "$1" ]; then
+        echo "'$1' is not a file"
+        return 1
+    fi
+    case "$1" in
+        *.tar.bz2)  tar xjf "$1"   ;;
+        *.tar.gz)   tar xzf "$1"   ;;
+        *.tar.xz)   tar xJf "$1"   ;;
+        *.tar.zst)  tar --zstd -xf "$1" ;;
+        *.tar)      tar xf "$1"    ;;
+        *.bz2)      bunzip2 "$1"   ;;
+        *.gz)       gunzip "$1"    ;;
+        *.zip)      unzip "$1"     ;;
+        *.7z)       7z x "$1"      ;;
+        *.rar)      unrar x "$1"   ;;
+        *.xz)       xz -d "$1"     ;;
+        *.zst)      zstd -d "$1"   ;;
+        *)          echo "Don't know how to extract '$1'" ; return 1 ;;
+    esac
 }
 
 # iTerm2 Shell Integration
