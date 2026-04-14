@@ -21,4 +21,10 @@ mkdir -p "$HOME/.config/zed" "$HOME/.config/gh"
 ln -sf "$DOTFILES_DIR/config/zed/settings.json" "$HOME/.config/zed/settings.json"
 ln -sf "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 
+echo "⏰ Installing launchd agents..."
+mkdir -p "$HOME/Library/LaunchAgents"
+ln -sf "$DOTFILES_DIR/launchd/local.brew-update.plist" "$HOME/Library/LaunchAgents/local.brew-update.plist"
+launchctl unload "$HOME/Library/LaunchAgents/local.brew-update.plist" 2>/dev/null || true
+launchctl load "$HOME/Library/LaunchAgents/local.brew-update.plist"
+
 echo "✅ Setup complete! Restart your terminal."
