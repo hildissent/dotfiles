@@ -1,0 +1,8 @@
+{
+  "obsidian-mcp-tools": {
+    "command": "/Users/hildy/Library/Mobile Documents/com~apple~CloudDocs/vault-rpg/.obsidian/plugins/mcp-tools/bin/mcp-server",
+    "env": {
+      "OBSIDIAN_API_KEY": "PLACEHOLDER"
+    }
+  }
+}

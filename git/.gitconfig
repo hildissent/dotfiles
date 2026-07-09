@@ -52,9 +52,9 @@
 [pull]
     ff = only
 
-[filter "zed-secrets"]
-    clean = ~/.dotfiles/scripts/clean-zed-secrets.sh
-    smudge = ~/.dotfiles/scripts/smudge-zed-secrets.sh
+[filter "secrets"]
+    clean = ~/.dotfiles/scripts/clean-secrets.sh
+    smudge = ~/.dotfiles/scripts/smudge-secrets.sh
 
 [pager]
     diff = diff-so-fancy | less --tabs=4 -RFX

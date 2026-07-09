@@ -21,6 +21,14 @@ mkdir -p "$HOME/.config/zed" "$HOME/.config/gh"
 ln -sf "$DOTFILES_DIR/config/zed/settings.json" "$HOME/.config/zed/settings.json"
 ln -sf "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 
+# Claude Code global config
+mkdir -p "$HOME/.claude"
+ln -sf "$DOTFILES_DIR/config/claude/settings.json" "$HOME/.claude/settings.json"
+ln -sf "$DOTFILES_DIR/config/claude/mcp_servers.json" "$HOME/.claude/mcp_servers.json"
+
+echo "🖥  Restoring iTerm2 preferences..."
+defaults import com.googlecode.iterm2 "$DOTFILES_DIR/config/iterm2/com.googlecode.iterm2.plist"
+
 echo "⏰ Installing launchd agents..."
 mkdir -p "$HOME/Library/LaunchAgents"
 ln -sf "$DOTFILES_DIR/launchd/local.brew-update.plist" "$HOME/Library/LaunchAgents/local.brew-update.plist"

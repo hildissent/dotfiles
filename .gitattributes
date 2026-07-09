@@ -1,1 +1,3 @@
-config/zed/settings.json filter=zed-secrets
+config/zed/settings.json filter=secrets
+config/claude/settings.json filter=secrets
+config/claude/mcp_servers.json filter=secrets
