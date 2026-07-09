@@ -115,3 +115,5 @@ extract() {
 
 # iTerm2 Shell Integration
 test -e "${HOME}/.iterm2.zsh" && source "${HOME}/.iterm2.zsh"
+
+. "$HOME/.local/bin/env"
