@@ -25,6 +25,7 @@ ln -sf "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 mkdir -p "$HOME/.claude"
 ln -sf "$DOTFILES_DIR/config/claude/settings.json" "$HOME/.claude/settings.json"
 ln -sf "$DOTFILES_DIR/config/claude/mcp_servers.json" "$HOME/.claude/mcp_servers.json"
+ln -sf "$DOTFILES_DIR/config/claude/statusline-command.sh" "$HOME/.claude/statusline-command.sh"
 
 echo "🖥  Restoring iTerm2 preferences..."
 defaults import com.googlecode.iterm2 "$DOTFILES_DIR/config/iterm2/com.googlecode.iterm2.plist"
