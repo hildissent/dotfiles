@@ -30,10 +30,4 @@ ln -sf "$DOTFILES_DIR/config/claude/statusline-command.sh" "$HOME/.claude/status
 echo "🖥  Restoring iTerm2 preferences..."
 defaults import com.googlecode.iterm2 "$DOTFILES_DIR/config/iterm2/com.googlecode.iterm2.plist"
 
-echo "⏰ Installing launchd agents..."
-mkdir -p "$HOME/Library/LaunchAgents"
-ln -sf "$DOTFILES_DIR/launchd/local.brew-update.plist" "$HOME/Library/LaunchAgents/local.brew-update.plist"
-launchctl unload "$HOME/Library/LaunchAgents/local.brew-update.plist" 2>/dev/null || true
-launchctl load "$HOME/Library/LaunchAgents/local.brew-update.plist"
-
 echo "✅ Setup complete! Restart your terminal."
