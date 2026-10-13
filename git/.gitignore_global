@@ -11,3 +11,5 @@
 *.swo
 *.swn
 .*.sw?
+
+**/.claude/settings.local.json

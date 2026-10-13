@@ -22,3 +22,6 @@ alias grep='grep --color=auto'
 alias less='less -R'
 alias cat='bat --paging=never'
 alias catp='bat'
+
+# Claude
+alias rpg='claude --add-dir ~/Developer --add-dir ~/Worldbuilding'
