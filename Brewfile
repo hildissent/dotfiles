@@ -58,6 +58,7 @@ cask "claude-code@latest"
 cask "discord"
 # Web browser
 cask "firefox"
+cask "font-victor-mono"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Desktop automation application

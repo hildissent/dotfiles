@@ -1,6 +1,8 @@
 # Ghostty config — docs: https://ghostty.org/docs/config
 # Show options: ghostty +show-config --default --docs
 
+font-family = "Victor Mono"
+
 # Quick terminal (drop-down from top). This combo isn't meant to be pressed by
 # hand: Hammerspoon sends it on a double-tap of Control (config/hammerspoon).
 keybind = global:ctrl+alt+super+shift+backquote=toggle_quick_terminal
