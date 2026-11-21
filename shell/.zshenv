@@ -1,3 +1,6 @@
+# Disable Apple Terminal's per-session history (~/.zsh_sessions)
+export SHELL_SESSIONS_DISABLE=1
+
 # Editor
 export EDITOR="zed"
 

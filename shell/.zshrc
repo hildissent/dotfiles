@@ -10,7 +10,9 @@ setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
 
 # Autocomplete improvements
-autoload -Uz compinit && compinit
+# Keep the completion cache out of ~
+mkdir -p ~/.cache/zsh
+autoload -Uz compinit && compinit -d ~/.cache/zsh/zcompdump
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'  # Case-insensitive
 zstyle ':completion:*' list-suffixes
 zstyle ':completion:*' expand prefix suffix
