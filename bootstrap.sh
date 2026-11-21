@@ -1,33 +1,26 @@
 #!/bin/bash
+# Symlink dotfiles into place. Safe to re-run.
+# (Software is installed manually; Brewfile is a record, not run here.)
 
-set -e  # Exit on error
+set -e
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-echo "🔧 Installing Homebrew packages..."
-brew bundle --file="$DOTFILES_DIR/Brewfile"
+link() {
+    mkdir -p "$(dirname "$2")"
+    ln -sfn "$DOTFILES_DIR/$1" "$2"
+    echo "  $2 -> $1"
+}
 
 echo "🔗 Linking dotfiles..."
-ln -sf "$DOTFILES_DIR/shell/.zshrc" "$HOME/.zshrc"
-ln -sf "$DOTFILES_DIR/shell/.zshenv" "$HOME/.zshenv"
-ln -sf "$DOTFILES_DIR/shell/.zprofile" "$HOME/.zprofile"
-ln -sf "$DOTFILES_DIR/shell/.fzf.zsh" "$HOME/.fzf.zsh"
-ln -sf "$DOTFILES_DIR/git/.gitconfig" "$HOME/.gitconfig"
-ln -sf "$DOTFILES_DIR/config/.npmrc" "$HOME/.npmrc"
-ln -sf "$DOTFILES_DIR/config/.gemrc" "$HOME/.gemrc"
+link shell/.zshrc                      "$HOME/.zshrc"
+link shell/.zshenv                     "$HOME/.zshenv"
+link shell/.zprofile                   "$HOME/.zprofile"
+link shell/.fzf.zsh                    "$HOME/.fzf.zsh"
+link git/.gitconfig                    "$HOME/.gitconfig"
+link config/zed/settings.json          "$HOME/.config/zed/settings.json"
+link config/gh/config.yml              "$HOME/.config/gh/config.yml"
+link config/claude/settings.json       "$HOME/.claude/settings.json"
+link config/claude/statusline-command.sh "$HOME/.claude/statusline-command.sh"
 
-# XDG config directory links
-mkdir -p "$HOME/.config/zed" "$HOME/.config/gh"
-ln -sf "$DOTFILES_DIR/config/zed/settings.json" "$HOME/.config/zed/settings.json"
-ln -sf "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
-
-# Claude Code global config
-mkdir -p "$HOME/.claude"
-ln -sf "$DOTFILES_DIR/config/claude/settings.json" "$HOME/.claude/settings.json"
-ln -sf "$DOTFILES_DIR/config/claude/mcp_servers.json" "$HOME/.claude/mcp_servers.json"
-ln -sf "$DOTFILES_DIR/config/claude/statusline-command.sh" "$HOME/.claude/statusline-command.sh"
-
-echo "🖥  Restoring iTerm2 preferences..."
-defaults import com.googlecode.iterm2 "$DOTFILES_DIR/config/iterm2/com.googlecode.iterm2.plist"
-
-echo "✅ Setup complete! Restart your terminal."
+echo "✅ Done. Open a new terminal window."

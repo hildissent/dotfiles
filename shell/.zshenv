@@ -1,9 +1,3 @@
-# Homebrew
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-
-# Node.js
-export PATH="$HOME/.node/bin:$PATH"
-
 # Editor
 export EDITOR="zed"
 
@@ -11,5 +5,5 @@ export EDITOR="zed"
 export BAT_THEME="ansi"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-# Obsidian
+# Obsidian CLI
 export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"

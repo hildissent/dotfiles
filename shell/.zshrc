@@ -18,7 +18,6 @@ zstyle ':completion:*' menu select                         # Use arrow keys to n
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"    # Colored file listings
 zstyle ':completion:*:*:git:*' script ~/.dotfiles/scripts/git-completion.sh
 autoload bashcompinit && bashcompinit
-[[ -r ~/Projects/autopkg_complete/autopkg ]] && source ~/Projects/autopkg_complete/autopkg
 
 # Ignore duplicate history entries
 setopt HIST_IGNORE_ALL_DUPS
@@ -48,10 +47,10 @@ bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 
 # Syntax highlighting (must come before autosuggestions)
-source /usr/local/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Fish-like inline autosuggestions from history
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept   # Ctrl+Space to accept suggestion
 
 # fzf integration for command history
@@ -63,13 +62,6 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 # Use fd for fzf file search
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-# NVM (Node Version Manager)
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
-
-# rbenv (Ruby Version Manager)
-eval "$(rbenv init - zsh)"
 
 # Auto-list directory contents after cd
 chpwd() {
@@ -112,8 +104,3 @@ extract() {
         *)          echo "Don't know how to extract '$1'" ; return 1 ;;
     esac
 }
-
-# iTerm2 Shell Integration
-test -e "${HOME}/.iterm2.zsh" && source "${HOME}/.iterm2.zsh"
-
-. "$HOME/.local/bin/env"
