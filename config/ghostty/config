@@ -3,6 +3,12 @@
 
 font-family = "Victor Mono"
 
+# Window
+window-padding-x = 8
+window-padding-y = 8
+window-padding-balance = true
+mouse-hide-while-typing = true
+
 # Quick terminal (drop-down from top). This combo isn't meant to be pressed by
 # hand: Hammerspoon sends it on a double-tap of Control (config/hammerspoon).
 keybind = global:ctrl+alt+super+shift+backquote=toggle_quick_terminal
