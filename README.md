@@ -9,7 +9,7 @@ Personal macOS (Apple Silicon) configuration.
 - `shell/` — zsh configuration (.zshrc, .zshenv, .zprofile, aliases, fzf)
 - `git/` — Git configuration and global gitignore
 - `scripts/` — git completion
-- `config/` — App configs: Zed, gh, Ghostty, Hammerspoon, Claude Code (`settings.json`, status line)
+- `config/` — App configs: Zed, gh, Ghostty, Hammerspoon, mise, npm, gem, irb, Claude Code (`settings.json`, `CLAUDE.md`, status line)
 
 ## Quick Start
 ```bash
@@ -23,3 +23,18 @@ bash ~/.dotfiles/bootstrap.sh
 - eza, bat, zoxide, ripgrep, diff-so-fancy
 - Terminal: Ghostty · Editor: Zed
 - Double-tap Control toggles Ghostty's drop-down quick terminal (via Hammerspoon)
+
+## Languages
+
+[mise](https://mise.jdx.dev) manages Node (LTS) + pnpm, Ruby, Go, and uv. uv manages Python
+(`uv python install --default`). After bootstrap on a new Mac:
+```bash
+mise install && uv python install --default
+```
+Projects pin versions with `mise use <tool>@<version>` (writes `mise.toml`).
+
+## Keeping ~ clean
+
+`shell/.zshenv` sets XDG base dirs and points npm, Python, Ruby/Bundler, Go, and less history/cache
+files into `~/.config`, `~/.cache`, `~/.local/share`, and `~/.local/state`.
+Code projects live in `~/Developer`, web content in `~/Sites`.

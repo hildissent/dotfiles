@@ -22,6 +22,8 @@ brew "imagemagick"
 brew "jq"
 # Mac App Store command-line interface
 brew "mas"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # NCurses Disk Usage
 brew "ncdu"
 # Swiss-army knife of markup format conversion

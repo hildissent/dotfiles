@@ -22,8 +22,13 @@ link config/zed/settings.json          "$HOME/.config/zed/settings.json"
 link config/gh/config.yml              "$HOME/.config/gh/config.yml"
 link config/claude/settings.json       "$HOME/.claude/settings.json"
 link config/claude/statusline-command.sh "$HOME/.claude/statusline-command.sh"
+link config/claude/CLAUDE.md            "$HOME/.claude/CLAUDE.md"
 link config/ghostty/config             "$HOME/.config/ghostty/config"
 link config/hammerspoon/init.lua       "$HOME/.config/hammerspoon/init.lua"
+link config/mise/config.toml           "$HOME/.config/mise/config.toml"
+link config/npm/npmrc                  "$HOME/.config/npm/npmrc"
+link config/gem/gemrc                  "$HOME/.config/gem/gemrc"
+link config/irb/irbrc                  "$HOME/.config/irb/irbrc"
 
 # Point Hammerspoon at ~/.config instead of ~/.hammerspoon
 defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"

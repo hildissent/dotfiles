@@ -65,6 +65,9 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# mise: per-project language versions (node, ruby, go, uv)
+eval "$(mise activate zsh)"
+
 # Auto-list directory contents after cd
 # (only when output is a terminal, so scripts and tools that cd aren't affected)
 chpwd() {

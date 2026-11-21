@@ -1,0 +1,8 @@
+# Global default tool versions (projects pin their own in mise.toml)
+# Docs: https://mise.jdx.dev
+[tools]
+node = "lts"
+pnpm = "latest"
+ruby = "latest"
+go = "latest"
+uv = "latest"   # uv manages Python itself: `uv python install`, per-project .venv
