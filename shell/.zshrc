@@ -66,8 +66,9 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Auto-list directory contents after cd
+# (only when output is a terminal, so scripts and tools that cd aren't affected)
 chpwd() {
-    eza --group-directories-first
+    [[ -t 1 ]] && eza --group-directories-first
 }
 
 # zoxide: smarter cd with frecency (use 'z' to jump, 'zi' for interactive fzf)

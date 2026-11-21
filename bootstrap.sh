@@ -22,5 +22,10 @@ link config/zed/settings.json          "$HOME/.config/zed/settings.json"
 link config/gh/config.yml              "$HOME/.config/gh/config.yml"
 link config/claude/settings.json       "$HOME/.claude/settings.json"
 link config/claude/statusline-command.sh "$HOME/.claude/statusline-command.sh"
+link config/ghostty/config             "$HOME/.config/ghostty/config"
+link config/hammerspoon/init.lua       "$HOME/.config/hammerspoon/init.lua"
+
+# Point Hammerspoon at ~/.config instead of ~/.hammerspoon
+defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
 
 echo "✅ Done. Open a new terminal window."

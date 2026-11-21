@@ -58,6 +58,8 @@ cask "discord"
 cask "firefox"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Desktop automation application
+cask "hammerspoon"
 # Chromium-based web browser
 cask "helium-browser"
 # Software for Logitech devices

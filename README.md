@@ -9,7 +9,7 @@ Personal macOS (Apple Silicon) configuration.
 - `shell/` — zsh configuration (.zshrc, .zshenv, .zprofile, aliases, fzf)
 - `git/` — Git configuration and global gitignore
 - `scripts/` — git completion
-- `config/` — App configs: Zed, gh, Claude Code (`settings.json`, status line)
+- `config/` — App configs: Zed, gh, Ghostty, Hammerspoon, Claude Code (`settings.json`, status line)
 
 ## Quick Start
 ```bash
@@ -22,3 +22,4 @@ bash ~/.dotfiles/bootstrap.sh
 - zsh (Homebrew) with syntax highlighting, autosuggestions, fzf history/file search (via fd)
 - eza, bat, zoxide, ripgrep, diff-so-fancy
 - Terminal: Ghostty · Editor: Zed
+- Double-tap Control toggles Ghostty's drop-down quick terminal (via Hammerspoon)
