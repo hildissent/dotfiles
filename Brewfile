@@ -50,6 +50,8 @@ cask "1password"
 cask "1password-cli"
 # Image editing and design software
 cask "affinity"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Terminal-based AI coding assistant
@@ -65,6 +67,8 @@ cask "ghostty"
 cask "hammerspoon"
 # Chromium-based web browser
 cask "helium-browser"
+# Free and open-source media player
+cask "iina"
 # Software for Logitech devices
 cask "logi-options+"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -73,10 +77,13 @@ cask "obsidian"
 cask "protonvpn"
 # Video game digital distribution service
 cask "steam"
-# Multimedia player
-cask "vlc"
+# Unpacks archive files
+cask "the-unarchiver"
 # Multiplayer code editor
 cask "zed"
+# Video communication and virtual meeting platform
+cask "zoom"
+mas "1Password for Safari", id: 1569813296
 mas "GarageBand", id: 682658836
 mas "Highlights", id: 1498912833
 mas "iMovie", id: 408981434
