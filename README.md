@@ -24,6 +24,12 @@ Run the steps in order, and open a new terminal only after step 5.
 7. `gh auth login && gh auth setup-git`
 8. Grant Hammerspoon Accessibility permission and sign in to Claude Code, 1Password, etc.
 
+## Manually installed software
+
+Not available through Homebrew or the App Store, so it isn't in the Brewfile:
+
+- [Foundry Virtual Tabletop](https://foundryvtt.com) — licensed; download the macOS build from the Foundry site
+
 ## Shell setup
 
 - zsh (Homebrew) with syntax highlighting, autosuggestions, fzf history/file search (via fd)
