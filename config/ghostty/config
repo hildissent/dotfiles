@@ -8,6 +8,8 @@ window-padding-x = 8
 window-padding-y = 8
 window-padding-balance = true
 mouse-hide-while-typing = true
+background-opacity = 0.85
+background-blur = true
 
 # Quick terminal (drop-down from top). This combo isn't meant to be pressed by
 # hand: Hammerspoon sends it on a double-tap of Control (config/hammerspoon).
