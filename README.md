@@ -12,10 +12,17 @@ Personal macOS (Apple Silicon) configuration.
 - `config/` — App configs: Zed, gh, Ghostty, Hammerspoon, mise, npm, gem, irb, Claude Code (`settings.json`, `CLAUDE.md`, status line)
 
 ## Quick Start
-```bash
-gh repo clone hildissent/dotfiles ~/.dotfiles
-bash ~/.dotfiles/bootstrap.sh
-```
+On a new Mac (the repo must live at `~/.dotfiles`; paths in the shell and git config assume it).
+Run the steps in order, and open a new terminal only after step 5.
+
+1. `xcode-select --install`
+2. Install [Homebrew](https://brew.sh)
+3. `git clone https://github.com/hildissent/dotfiles.git ~/.dotfiles`
+4. Sign in to the App Store, then `brew bundle --file=~/.dotfiles/Brewfile`
+5. `bash ~/.dotfiles/bootstrap.sh`
+6. In a new terminal: `mise install && uv python install --default`
+7. `gh auth login && gh auth setup-git`
+8. Grant Hammerspoon Accessibility permission and sign in to Claude Code, 1Password, etc.
 
 ## Shell setup
 
@@ -27,11 +34,7 @@ bash ~/.dotfiles/bootstrap.sh
 ## Languages
 
 [mise](https://mise.jdx.dev) manages Node (LTS) + pnpm, Ruby, Go, and uv. uv manages Python
-(`uv python install --default`). After bootstrap on a new Mac:
-```bash
-mise install && uv python install --default
-```
-Projects pin versions with `mise use <tool>@<version>` (writes `mise.toml`).
+(`uv python install --default`; see Quick Start step 6). Projects pin versions with `mise use <tool>@<version>` (writes `mise.toml`).
 
 ## Keeping ~ clean
 

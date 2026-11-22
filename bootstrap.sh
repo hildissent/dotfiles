@@ -30,6 +30,9 @@ link config/npm/npmrc                  "$HOME/.config/npm/npmrc"
 link config/gem/gemrc                  "$HOME/.config/gem/gemrc"
 link config/irb/irbrc                  "$HOME/.config/irb/irbrc"
 
+# Standard directories for code and web content
+mkdir -p "$HOME/Developer" "$HOME/Sites"
+
 # Point Hammerspoon at ~/.config instead of ~/.hammerspoon
 defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
 
