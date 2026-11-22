@@ -69,6 +69,8 @@ cask "hammerspoon"
 cask "helium-browser"
 # Free and open-source media player
 cask "iina"
+# Launchpad replacement
+cask "launchie"
 # Software for Logitech devices
 cask "logi-options+"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -77,6 +79,8 @@ cask "obsidian"
 cask "protonvpn"
 # Video game digital distribution service
 cask "steam"
+# Menu bar manager
+cask "thaw@beta"
 # Unpacks archive files
 cask "the-unarchiver"
 # Multiplayer code editor
