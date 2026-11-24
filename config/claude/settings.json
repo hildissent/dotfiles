@@ -1,5 +1,4 @@
 {
-  "theme": "auto",
   "permissions": {
     "allow": [
       "Bash(brew install:*)",
@@ -27,12 +26,12 @@
     ],
     "defaultMode": "auto"
   },
+  "model": "sonnet",
+  "enableWorkflows": true,
   "statusLine": {
     "type": "command",
     "command": "bash ~/.claude/statusline-command.sh"
   },
-  "model": "sonnet",
-  "enableWorkflows": true,
   "effortLevel": "medium",
   "modelSettings": {
     "claude-sonnet-5-5": {
@@ -42,6 +41,7 @@
   "awaySummaryEnabled": false,
   "autoUpdatesChannel": "stable",
   "tui": "fullscreen",
+  "theme": "auto",
   "editorMode": "normal",
   "preferredNotifChannel": "notifications_disabled",
   "autoScrollEnabled": true,
