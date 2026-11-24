@@ -5,7 +5,7 @@ Personal macOS (Apple Silicon) configuration.
 ## Structure
 
 - `bootstrap.sh` — Symlinks configs into place (safe to re-run)
-- `Brewfile` — Record of installed Homebrew packages, casks, and App Store apps (refresh with `brew bundle dump --file=~/.dotfiles/Brewfile --force --no-vscode`)
+- `Brewfile` — Record of installed Homebrew packages, casks, and App Store apps (refresh with `brew bundle dump --file=~/.dotfiles/Brewfile --force --no-vscode && sed -i '' '/^go "/d' ~/.dotfiles/Brewfile`)
 - `shell/` — zsh configuration (.zshrc, .zshenv, .zprofile, aliases, fzf)
 - `git/` — Git configuration and global gitignore
 - `scripts/` — git completion

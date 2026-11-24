@@ -4,7 +4,7 @@ The user values a tidy system: no stray files in ~, no unnecessary or outdated c
 
 ## Dotfiles
 - All config lives in ~/.dotfiles (GitHub: dotfiles) and is symlinked by bootstrap.sh.
-- Only keep config for software that is actually installed. When a tool is added or removed, update the repo, bootstrap.sh, and the Brewfile record (`brew bundle dump --file=~/.dotfiles/Brewfile --force --no-vscode`).
+- Only keep config for software that is actually installed. When a tool is added or removed, update the repo, bootstrap.sh, and the Brewfile record (`brew bundle dump --file=~/.dotfiles/Brewfile --force --no-vscode && sed -i '' '/^go "/d' ~/.dotfiles/Brewfile`).
 - Ask before committing or pushing.
 
 ## Where things go

@@ -79,8 +79,6 @@ cask "obsidian"
 cask "protonvpn"
 # Video game digital distribution service
 cask "steam"
-# Menu bar manager
-cask "thaw@beta"
 # Unpacks archive files
 cask "the-unarchiver"
 # Multiplayer code editor
@@ -89,8 +87,11 @@ cask "zed"
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "GarageBand", id: 682658836
+mas "Goodnotes", id: 1444383602
 mas "Highlights", id: 1498912833
 mas "iMovie", id: 408981434
 mas "Keynote", id: 361285480
+mas "Motion", id: 434290957
 mas "Numbers", id: 361304891
+mas "Obsidian Web Clipper", id: 6720708363
 mas "Pages", id: 361309726
