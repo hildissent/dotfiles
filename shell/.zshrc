@@ -1,5 +1,5 @@
 # History settings
-HISTFILE=~/.zsh_history
+HISTFILE="$XDG_STATE_HOME/zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
 
@@ -10,9 +10,10 @@ setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
 
 # Autocomplete improvements
-# Keep the completion cache out of ~
+# Keep the completion dump and cache out of ~
 mkdir -p ~/.cache/zsh
 autoload -Uz compinit && compinit -d ~/.cache/zsh/zcompdump
+zstyle ':completion:*' cache-path ~/.cache/zsh/zcompcache
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'  # Case-insensitive
 zstyle ':completion:*' list-suffixes
 zstyle ':completion:*' expand prefix suffix
