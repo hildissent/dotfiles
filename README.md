@@ -44,6 +44,9 @@ Not available through Homebrew or the App Store, so it isn't in the Brewfile:
 
 ## Keeping ~ clean
 
-`shell/.zshenv` sets XDG base dirs and points npm, Python, Ruby/Bundler, Go, and less history/cache
+`shell/.zshenv` sets XDG base dirs and points npm config, Python, Ruby/Bundler, Go, and less history
 files into `~/.config`, `~/.cache`, `~/.local/share`, and `~/.local/state`.
-Code projects live in `~/Developer`, web content in `~/Sites`.
+Only redirects that work in every use case (not just from a shell) belong here; otherwise data stays
+where the tool expects it, so nothing is duplicated (e.g. npm's cache stays in `~/.npm`).
+Code projects live in `~/Developer`, web content in `~/Sites`. Non-iCloud personal content
+(`~/Books`, `~/VTT Assets`) intentionally lives in `~`.

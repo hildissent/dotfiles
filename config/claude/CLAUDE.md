@@ -10,7 +10,9 @@ The user values a tidy system: no stray files in ~, no unnecessary or outdated c
 ## Where things go
 - Code projects: ~/Developer/<project>/, one git repo each.
 - Web content: ~/Sites/.
-- Never create files directly in ~. Tool data follows XDG dirs (env vars in shell/.zshenv): ~/.config, ~/.cache, ~/.local/share, ~/.local/state.
+- Never create files directly in ~ for tool data. Where a tool honors XDG dirs, use them (env vars in shell/.zshenv): ~/.config, ~/.cache, ~/.local/share, ~/.local/state.
+- Predictable beats tidy. Only redirect a tool's data if the redirect holds in every typical use (shell, GUI apps, editors, other launchers). Otherwise leave the data where the tool expects it, so there is never a duplicate in two places.
+- Non-iCloud personal content (e.g. ~/Books, ~/VTT Assets) deliberately lives in ~. Leave it alone.
 
 ## Languages and tooling
 - Versions are managed by **mise** (global defaults in ~/.config/mise/config.toml). Pin per project with `mise use <tool>@<version>`, which writes mise.toml in the project.
