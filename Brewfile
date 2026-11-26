@@ -52,8 +52,6 @@ cask "1password-cli"
 cask "affinity"
 # 3D creation suite
 cask "blender"
-# Web browser focusing on privacy
-cask "brave-browser"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
 # Anthropic's official Claude AI desktop app
