@@ -50,6 +50,10 @@ cask "1password"
 cask "1password-cli"
 # Image editing and design software
 cask "affinity"
+# 3D creation suite
+cask "blender"
+# Web browser focusing on privacy
+cask "brave-browser"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
 # Anthropic's official Claude AI desktop app
@@ -60,6 +64,15 @@ cask "claude-code@latest"
 cask "discord"
 # Web browser
 cask "firefox"
+cask "font-barlow"
+cask "font-barlow-condensed"
+cask "font-barlow-semi-condensed"
+cask "font-cormorant"
+cask "font-cormorant-garamond"
+cask "font-cormorant-infant"
+cask "font-cormorant-sc"
+cask "font-cormorant-unicase"
+cask "font-cormorant-upright"
 cask "font-victor-mono"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
@@ -69,8 +82,12 @@ cask "hammerspoon"
 cask "helium-browser"
 # Free and open-source media player
 cask "iina"
+# Free and open-source painting and sketching program
+cask "krita"
 # Launchpad replacement
 cask "launchie"
+# Free cross-platform office suite, fresh version
+cask "libreoffice"
 # Software for Logitech devices
 cask "logi-options+"
 # Knowledge base that works on top of a local folder of plain text Markdown files
