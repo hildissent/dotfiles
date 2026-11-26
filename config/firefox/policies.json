@@ -1,0 +1,12 @@
+{
+  "policies": {
+    "Permissions": {
+      "Cookies": {
+        "Allow": [
+          "https://roll20.net",
+          "https://app.roll20.net"
+        ]
+      }
+    }
+  }
+}

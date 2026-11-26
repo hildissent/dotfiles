@@ -30,6 +30,16 @@ link config/npm/npmrc                  "$HOME/.config/npm/npmrc"
 link config/gem/gemrc                  "$HOME/.config/gem/gemrc"
 link config/irb/irbrc                  "$HOME/.config/irb/irbrc"
 
+# Firefox: user.js goes in the default-release profile; policies.json goes in the
+# app bundle (re-run this script after reinstalling or updating Firefox)
+FF_PROFILE=$(ls -d "$HOME"/Library/Application\ Support/Firefox/Profiles/*.default-release 2>/dev/null | head -1)
+if [ -n "$FF_PROFILE" ]; then
+    link config/firefox/user.js "$FF_PROFILE/user.js"
+fi
+if [ -d /Applications/Firefox.app ]; then
+    link config/firefox/policies.json /Applications/Firefox.app/Contents/Resources/distribution/policies.json
+fi
+
 # Standard directories for code and web content
 mkdir -p "$HOME/Developer" "$HOME/Sites"
 
